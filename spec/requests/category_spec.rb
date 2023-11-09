@@ -35,9 +35,9 @@ RSpec.describe CategoriesController, type: :controller do
   describe 'POST #create' do
     context 'with valid attributes' do
       it 'creates a new category' do
-        expect {
+        expect do
           post :create, params: { group: { name: 'New Category', icon: 'fa-star' } }
-        }.to change(Group, :count).by(1)
+        end.to change(Group, :count).by(1)
       end
 
       it 'redirects to categories index' do
@@ -48,9 +48,9 @@ RSpec.describe CategoriesController, type: :controller do
 
     context 'with invalid attributes' do
       it 'does not create a new category' do
-        expect {
+        expect do
           post :create, params: { group: { name: '', icon: '' } }
-        }.not_to change(Group, :count)
+        end.not_to change(Group, :count)
       end
 
       it 're-renders the new template' do
@@ -122,9 +122,9 @@ RSpec.describe CategoriesController, type: :controller do
     let(:category) { create(:group, user: user) }
 
     it 'destroys the category' do
-      expect {
+      expect do
         delete :destroy, params: { id: category.id }
-      }.to change(Group, :count).by(-1)
+      end.to change(Group, :count).by(-1)
     end
 
     it 'redirects to categories index' do

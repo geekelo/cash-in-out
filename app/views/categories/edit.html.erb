@@ -1,0 +1,10 @@
+<h1>Edit Category</h1>
+<%= form_with(model: @category, url: category_path(@category), method: :patch) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :icon %>
+  <%= form.text_field :icon %>
+
+  <%= form.submit "Save Category" %>
+<% end %>

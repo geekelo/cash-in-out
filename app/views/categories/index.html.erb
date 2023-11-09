@@ -6,7 +6,7 @@
   
   <%=  category.icon %>
  
-
+  <%= link_to 'Edit', edit_category_path(category), class: ['tablecol', 'navlink', 'actbtn', 'edit'] %>
   <%= button_to 'Delete', category_path(category), method: :delete, class: ['tablecol', 'navlink', 'actbtn', 'del'] , data: { confirm: 'Are you sure?' } %>
   </li>
   </ul>

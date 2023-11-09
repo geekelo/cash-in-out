@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @categories = current_user.groups.includes(:user)
   end
@@ -33,7 +33,17 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @recipe = current_user.categories.find(params[:id])
+    @category = current_user.groups.find(params[:id])
+  end
+
+  def update
+    @category = current_user.groups.find(params[:id])
+
+    if @category.update(group_params)
+      redirect_to categories_path, notice: 'Category updated successfully.'
+    else
+      render :edit
+    end
   end
 
   def destroy

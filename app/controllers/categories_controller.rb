@@ -3,6 +3,11 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = current_user.groups.includes(:user)
+    @total_amounts = {}
+
+    @categories.each do |category|
+      @total_amounts[category.id] = category.entities.sum(:amount)
+    end
   end
 
   def new
@@ -21,6 +26,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Group.find(params[:id])
     @transactions = @category.entities
+    @total_amount = @category.entities.sum(:amount)
   end
 
   def edit

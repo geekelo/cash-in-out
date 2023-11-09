@@ -3,7 +3,7 @@
 <% @categories.each do |category| %>
   <li class="tablebody">
   <%= link_to category.name, category_path(category),  class: 'publicRecipeName' %>
-  
+  Total Amount: <%= @total_amounts[category.id] %>
   <%=  category.icon %>
  
   <%= link_to 'Edit', edit_category_path(category), class: ['tablecol', 'navlink', 'actbtn', 'edit'] %>

@@ -14,9 +14,10 @@ Rails.application.routes.draw do
   authenticated :user do
     root 'categories#index', as: :authenticated_root
   end
-
+  
   unauthenticated do
     root 'welcome#index', as: :unauthenticated_root
   end
+  
 
 end

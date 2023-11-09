@@ -1,5 +1,7 @@
 <h2><%= @category.name %></h2>
 
+<p>Total Amount: <%= @total_amount %></p>
+
 <ul>
   <% @category.entities.each do |transaction| %>
     <li>

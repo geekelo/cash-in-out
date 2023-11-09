@@ -1,2 +1,11 @@
-<h1>Welcome#index</h1>
+<section class="home_cont">
+  <div class="splashlogo_cont">
+  <%= image_tag 'splashlogo3.gif', alt: 'splash logo', class: 'custom-class', id: 'splashlogo' %>
+
+  </div>
+  <div class="regbtns_cont">
+    <%= link_to 'Sign up', new_user_registration_path, class: 'regbtns' %>
+    <%= link_to 'Login', new_user_session_path, class: 'regbtns' %>
+  </div>
+  </section>
 

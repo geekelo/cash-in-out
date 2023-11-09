@@ -1,3 +1,6 @@
+<div class="reglogo_cont"><%= image_tag 'reglogo.png', alt: 'reg logo', class: 'reglogo' %></div>
+
+<section class="forms">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -32,3 +35,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</section>

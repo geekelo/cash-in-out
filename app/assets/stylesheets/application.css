@@ -15,5 +15,161 @@
  *= require font-awesome
  */
  @import "font-awesome";
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.forms h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+/* SPLASH SCREEN */
+.home_cont {
+  background-color: #03476e;
+  height: 100vh;
+  background-image: url('bg.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#splashlogo {
+  width: 290px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.regbtns {
+  display: block;
+  background-color: #60b524;
+  color: #fff;
+  text-align: center;
+  width: 30%;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.regbtns:hover {
+  opacity: 0.8;
+}
+
+/* FORMS */
+.forms {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 1rem;
+  margin-top: -1rem;
+  background-color: #3878c2;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  padding: 2rem 4rem;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #60b524;
+  padding: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 1.6rem;
+  font-size: 1.2rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  outline: none;
+  width: 100%;
+  height: 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.forms a {
+  color: #fff;
+}
+
+.forgotpwd {
+  opacity: 0.5;
+}
+
+.reglogo {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reglogo_cont {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 720px) {
+  .forms h2 {
+    font-size: 2rem;
+  }
+
+  #splashlogo {
+    width: 550px;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .regbtns {
+    width: 20%;
+    margin: 0;
+  }
+
+  .regbtns_cont {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+  }
+
+  .forms {
+    font-size: 1.2rem;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    margin-top: -1rem;
+    padding: 1rem 0;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+  width: 100%;
+  height: 1.6rem;
+  }
+}
 
 

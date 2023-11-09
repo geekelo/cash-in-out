@@ -5,15 +5,6 @@ class CategoriesController < ApplicationController
     @categories = current_user.groups.includes(:user)
   end
 
-  def update
-    @category = current_user.groups.find(params[:id])
-    if @category.update(group_params)
-      redirect_to @category, notice: 'Recipe updated successfully.'
-    else
-      render :edit
-    end
-  end
-
   def new
     @category = current_user.groups.build
   end

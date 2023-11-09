@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
+  <li><a class="navlink" href="javascript:history.back()">Go Back</a></li>
+
+  <li><% if user_signed_in? %>
+  <%= button_to 'Sign out | Logout', destroy_user_session_path, method: :delete, class: ['navlink', 'navbutton'] %>
+<% else %>
+<li class="navbtn">  <%= link_to 'Sign up | Login', new_user_registration_path, class: ['navlink', 'navbutton'] %></li>
+<% end %>
+</li>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>

@@ -50,6 +50,8 @@ group :development, :test do
 
   gem 'devise'
 
+
+
     # The RSpec testing framework
     gem 'rspec-rails'
 
@@ -59,6 +61,10 @@ group :development, :test do
     # The following gems aids with the nuts and bolts
     # of interacting with the browser.
     gem 'webdrivers'
+    gem 'font-awesome-rails'
+
+
+
 end
 
 group :development do

@@ -1,0 +1,17 @@
+<%= form_with(model: [@category, @transaction], url: category_transactions_path(@category)) do |f| %>
+  <% if @transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+      <ul>
+        <% @transaction.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :amount %>
+  <%= f.number_field :amount %>
+  <%= f.submit 'Add Transaction' %>
+<% end %>

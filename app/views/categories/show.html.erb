@@ -1,0 +1,17 @@
+<h2><%= @category.name %></h2>
+
+<ul>
+  <% @category.entities.each do |transaction| %>
+    <li>
+      Name: <%= transaction.name %>, Amount: <%= transaction.amount %>
+      <%= link_to 'Edit', edit_category_transaction_path(@category, transaction) %>
+      <%= link_to 'Delete', category_transaction_path(@category, transaction), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
+
+
+
+<%= link_to 'Add Transactions', new_category_transaction_path(@category), class: ['navlink', 'actbtn'] %>
+
+

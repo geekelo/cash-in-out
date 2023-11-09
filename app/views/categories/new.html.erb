@@ -1,0 +1,17 @@
+<h1>Add Category</h1>
+
+<%= form_with model: @category, url: categories_path, local: true do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="field">
+  <%= form.label :icon, "Select Icon" %>
+  <%= form.collection_select(:icon, ["🏫", "🚌", "🍔", "🏥", "💡"], :to_s, :to_s, { prompt: "---" }, { class: 'fa-select' }) %>
+</div>
+
+
+  <div class="actions">
+    <%= form.submit "Add Category" %>
+  </div>
+<% end %>

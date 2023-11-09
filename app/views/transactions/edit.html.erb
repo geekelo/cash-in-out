@@ -1,0 +1,11 @@
+<h1>Edit Transaction</h1>
+
+<%= form_with model: @transaction, url: category_transaction_path(@category, @transaction), method: :patch do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :amount %>
+  <%= form.number_field :amount %>
+
+  <%= form.submit "Save Transaction" %>
+<% end %>

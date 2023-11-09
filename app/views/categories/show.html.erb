@@ -5,7 +5,7 @@
     <li>
       Name: <%= transaction.name %>, Amount: <%= transaction.amount %>
       <%= link_to 'Edit', edit_category_transaction_path(@category, transaction) %>
-      <%= link_to 'Delete', category_transaction_path(@category, transaction), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= button_to 'Delete', category_transaction_path(@category, transaction), method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
   <% end %>
 </ul>

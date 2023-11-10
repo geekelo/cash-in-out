@@ -1,18 +1,32 @@
-<div>
-  <h2>Categories</h2>
-  <%= button_to 'Sign out | Logout', destroy_user_session_path, method: :delete, class: ['navlink', 'navbutton'] %>
+<div class="topbar">
+  <button class="back_icon signout_icon" ="javascript:history.back()">☰</button>
+  <p class="topbar_text">CATEGORIES</p>
+  <%= button_to '◉', destroy_user_session_path, method: :delete, class: 'signout_icon' %>
 </div>
-<ul>
+
+<div class="acctbal">
+<p>Balance:</p>
+<p>Income:</p>
+<p>Expenditure: $<%= @total_expenditure %> </p>
+</div>
+<ul class="transactions_cont">
 <% @categories.each do |category| %>
-  <li class="tablebody">
-  <%= link_to category.name, category_path(category),  class: 'publicRecipeName' %>
-  Total Amount: <%= @total_amounts[category.id] %>
-  <%=  category.icon %>
- 
-  <%= link_to 'Edit', edit_category_path(category), class: ['tablecol', 'navlink', 'actbtn', 'edit'] %>
-  <%= button_to 'Delete', category_path(category), method: :delete, class: ['tablecol', 'navlink', 'actbtn', 'del'] , data: { confirm: 'Are you sure?' } %>
+
+  <li class="transactions">
+    <div class="icon"><%=  category.icon %></div>
+    <div class="categ_transcation">
+    <p>
+  <%= link_to category.name, category_path(category),  class: 'categtransact_name' %>
+  </p>
+<ul class="categtransact_edit_del_cont">
+  <li><%= link_to 'Edit', edit_category_path(category), class: 'transc_edit' %></li>
+  <li><%= button_to 'Delete', category_path(category), method: :delete, class: ['transc_edit', 'removebtnfeature'], data: { confirm: 'Are you sure?' } %></li>
+</ul>
+  </div>
+  <p class="transact_amount">$<%= @total_amounts[category.id] %></p>
   </li>
   </ul>
   <% end %>
-
-<%= link_to 'Add New Category', new_category_path, class: ['navlink', 'actbtn'] %>
+<div class="bottombar">
+<%= link_to 'Add New Category', new_category_path, class: 'bottombar_text' %>
+</div>

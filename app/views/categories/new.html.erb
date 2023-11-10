@@ -1,17 +1,24 @@
-<h1>Add Category</h1>
-
+<div class="topbar">
+  <button class="back_icon signout_icon" onclick="javascript:history.back()">❮</button>
+  <p class="topbar_text">Add Category</p>
+  <%= button_to '◉', destroy_user_session_path, method: :delete, class: 'signout_icon' %>
+  </div>
+ 
+  <div class="reglogo_cont"><%= image_tag 'reglogo.png', alt: 'reg logo', class: 'reglogo' %></div>
+  <section class="forms">
 <%= form_with model: @category, url: categories_path, local: true do |form| %>
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name, "Category:" %>
     <%= form.text_field :name %>
   </div>
   <div class="field">
-  <%= form.label :icon, "Select Icon" %>
+  <%= form.label :icon, "Choose Category Icon:" %>
   <%= form.collection_select(:icon, ["🏫", "🚌", "🍔", "🏥", "💡"], :to_s, :to_s, { prompt: "---" }, { class: 'fa-select' }) %>
 </div>
 
 
-  <div class="actions">
-    <%= form.submit "Add Category" %>
+  <div class="bottombar">
+    <%= form.submit "Add Category", class: 'bottombar_text' %>
   </div>
 <% end %>
+</section>

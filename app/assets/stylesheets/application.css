@@ -24,12 +24,19 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  color: #434c55;
+  padding-top: 6rem;
+  margin-bottom: 5rem;
 }
 
-.forms h2 {
+h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 900;
+}
+
+li {
+  list-style: none;
 }
 
 /* SPLASH SCREEN */
@@ -40,6 +47,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #splashlogo {
@@ -72,16 +84,24 @@ body {
 .forms {
   display: flex;
   flex-direction: column;
-  margin: 3rem 1rem;
+  margin: 0 1rem;
   margin-top: -1rem;
+  margin-bottom: 4rem;
   background-color: #3878c2;
   justify-content: center;
   align-items: center;
   border-radius: 3rem;
-  padding: 2rem 4rem;
+  padding: 2rem 3rem;
   font-size: 1rem;
   color: #fff;
   font-weight: 700;
+  padding-top: 3rem;
+  gap: 10px;
+}
+
+.forms form{
+  width: 80%;
+  padding-bottom: 2rem;
 }
 
 .field {
@@ -96,18 +116,19 @@ input[type="submit"] {
   border-radius: 5px;
   width: 100%;
   color: #fff;
-  margin-bottom: 1.6rem;
   font-size: 1.2rem;
 }
 
 input[type="text"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+input[type="number"] {
   outline: none;
   width: 100%;
   height: 1.5rem;
   border-radius: 5px;
   border: none;
+  padding-left: 10px;
 }
 
 .forms a {
@@ -129,9 +150,201 @@ input[type="email"] {
   justify-content: center;
 }
 
+/* TOP BAR */
+.topbar {
+  display: flex;
+  background-color: rgb(50, 107, 174);
+  padding: 1rem;
+  justify-content: space-between;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0
+}
+
+.signout_icon {
+  background-color: rgb(50, 107, 174);
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.back_icon {
+  font-size: 2rem;
+}
+
+.topbar_text {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* CATEGORIES */
+.acctbal {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: 20vh;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #434c55;
+}
+
+.transactions_cont {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.transactions {
+  display: flex;
+  border-radius: 1px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  height: 5rem;
+  margin-bottom: 0.8rem;
+  width: 95%;
+  margin: auto;
+}
+
+.icon {
+  width: 20%;
+  background-color: #3878c211;
+  font-size: 2.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottombar {
+  display: flex;
+  background-color: #60b524;
+  padding: 1rem;
+  justify-content: space-between;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+}
+
+.categ_transcation {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.8rem;
+  gap: 10px;
+}
+
+.bottombar_text {
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem;
+  width: 90%;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.categtransact_name {
+  font-size: 1.3rem;
+  color:#434c55;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.categtransact_edit_del_cont {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  font-size: 0.8rem;
+}
+
+.transc_edit {
+  font-style: italic;
+  color:#434c5577;
+  text-decoration: none;
+}
+
+.transc_edit:hover {
+  text-decoration: underline;
+}
+
+.removebtnfeature {
+  border: none;
+  background-color: #03476e00;
+}
+
+.transact_amount  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.transact_nametag {
+  color:#60b524;
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.pophide {
+  display: none;
+}
+
+
+/* NOTICE AND ALERTS */
+.popups {
+  position: fixed;
+  top: 10rem;
+  left: 15%;
+  right: 15%;
+  bottom: 15%;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 3rem;
+  background-color: #fff;
+  font-size: 1.5rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.closenotification {
+  font-size: 1rem;
+  border: 1px solid #434c55a9;
+  border-radius: 5%;
+  padding: 0.5rem 1rem;
+}
+
+.noticeicon {
+  border-radius: 100%;
+  background-color: #60b524;
+  padding: 1rem;
+  color: #fff;
+}
+
 @media only screen and (min-width: 720px) {
-  .forms h2 {
+  h2 {
     font-size: 2rem;
+    text-align: center;
   }
 
   #splashlogo {
@@ -162,13 +375,19 @@ input[type="email"] {
     margin-bottom: 1.5rem;
     margin-top: -1rem;
     padding: 1rem 0;
+    padding-top: 3rem;
   }
 
   input[type="text"],
   input[type="password"],
-  input[type="email"] {
+  input[type="email"],
+  input[type="number"] {
   width: 100%;
   height: 1.6rem;
+  }
+
+  .transact_nametag {
+    padding-left: 2rem;
   }
 }
 

@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
     @categories.each do |category|
       @total_amounts[category.id] = category.entities.sum(:amount)
     end
+    @total_expenditure = current_user.entities.sum(:amount)
   end
 
   def new

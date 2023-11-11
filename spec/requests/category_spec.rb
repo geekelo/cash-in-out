@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
-  let(:user) { FactoryBot.create(:user) }# Assuming you have a User model and a factory for it
+  let(:user) { FactoryBot.create(:user) } # Assuming you have a User model and a factory for it
 
   before do
     sign_in user

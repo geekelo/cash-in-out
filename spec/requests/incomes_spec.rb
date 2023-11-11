@@ -34,10 +34,6 @@ RSpec.describe IncomesController, type: :request do
         expect(response).to redirect_to(categories_path)
       end
     end
-
-    context 'with invalid attributes' do
-
-    end
   end
 
   describe 'POST #clear_all' do

@@ -23,7 +23,5 @@ RSpec.describe TransactionsController, type: :request do
 
   describe 'GET #edit' do
     let(:transaction) { create(:entity, category: category, user: user) } # Assuming you have an Entity factory
-
   end
-
 end

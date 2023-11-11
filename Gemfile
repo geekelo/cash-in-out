@@ -58,10 +58,10 @@ group :development, :test do
 
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
-  gem 'font-awesome-rails'
-  gem 'webdrivers'
   gem 'factory_bot_rails'
+  gem 'font-awesome-rails'
   gem 'rails-controller-testing'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -79,4 +79,3 @@ group :test do
   gem 'shoulda-matchers'
   # ... other gems
 end
-

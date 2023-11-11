@@ -85,3 +85,4 @@ production:
   database: cash_in_out_production
   username: cash_in_out
   password: <%= ENV["CASH_IN_OUT_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

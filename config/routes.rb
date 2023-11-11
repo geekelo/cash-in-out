@@ -24,6 +24,6 @@ Rails.application.routes.draw do
   unauthenticated do
     root 'welcome#index', as: :unauthenticated_root
   end
-  
+  resources :users
   delete '/users/:id', to: 'users#destroy', as: 'delete_user'
 end

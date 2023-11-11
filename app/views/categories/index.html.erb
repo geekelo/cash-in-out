@@ -32,7 +32,7 @@
 <ul class="categtransact_edit_del_cont">
   <li><%= link_to 'Edit', edit_category_path(category), class: 'transc_edit' %></li>
   <li><%= button_to 'Delete', category_path(category), method: :delete, class: ['transc_edit', 'removebtnfeature'], data: { confirm: 'Are you sure?' } %></li>
-  <li><%= button_to 'View', category_path(category), class: ['transc_edit', 'removebtnfeature'], data: { confirm: 'Are you sure?' } %></li>
+  <li><%= link_to 'View', category_path(category), class: ['transc_edit', 'removebtnfeature'], data: { confirm: 'Are you sure?' } %></li>
 </ul>
   </div>
   <p class="transact_amount">$<%= @total_amounts[category.id] %></p>

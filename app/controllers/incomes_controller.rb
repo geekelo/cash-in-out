@@ -18,7 +18,7 @@ class IncomesController < ApplicationController
     @income = current_user.incomes.build(income_params)
 
     if @income.save
-      redirect_to categories_path, notice: 'Income added successfully.'
+      redirect_to categories_path, notice: 'Credit added successfully.'
     else
       render :new
     end

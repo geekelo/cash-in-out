@@ -11,16 +11,25 @@ document.addEventListener('DOMContentLoaded', function() {
       alert.addEventListener('click', function() {
         // Hide the clicked alert
         this.style.display = 'none';
+
+        // Reload the page
+        location.reload();
       });
     });
   });
 
-  // document.addEventListener('DOMContentLoaded', function() {
-  //   // Select all elements with the 'popups' class
-  //   var popups = document.querySelectorAll('.popups');
-  
-  //   // Hide the popups on page load
-  //   popups.forEach(function(popup) {
-  //     popup.style.display = 'none';
-  //   });
-  // });
+  document.addEventListener('DOMContentLoaded', function() {
+    // Set the initial display to none
+    var menuSection = document.getElementById('menuSection');
+    menuSection.style.display = 'none';
+  });
+
+  function toggleMenu() {
+    var menuSection = document.getElementById('menuSection');
+    menuSection.style.display = menuSection.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function closeMenu() {
+    var menuSection = document.getElementById('menuSection');
+    menuSection.style.display = 'none';
+  }

@@ -1,5 +1,7 @@
 # transactions_controller.rb
 class TransactionsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @category = Group.find(params[:category_id])
     @transaction = @category.entities.new

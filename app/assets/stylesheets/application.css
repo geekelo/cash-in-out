@@ -14,8 +14,8 @@
  *= require_self
  *= require font-awesome
  */
- @import "font-awesome";
- @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import "font-awesome";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   margin: 0;
@@ -23,7 +23,7 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #434c55;
   padding-top: 6rem;
   margin-bottom: 5rem;
@@ -43,7 +43,7 @@ li {
 .home_cont {
   background-color: #03476e;
   height: 100vh;
-  background-image: url('bg.png');
+  background-image: url("bg.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,7 +99,7 @@ li {
   gap: 10px;
 }
 
-.forms form{
+.forms form {
   width: 80%;
   padding-bottom: 2rem;
 }
@@ -162,7 +162,7 @@ input[type="number"] {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0
+  right: 0;
 }
 
 .signout_icon {
@@ -170,6 +170,8 @@ input[type="number"] {
   border: none;
   color: #fff;
   font-size: 3rem;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .back_icon {
@@ -260,7 +262,7 @@ input[type="number"] {
 
 .categtransact_name {
   font-size: 1.3rem;
-  color:#434c55;
+  color: #434c55;
   font-weight: 900;
   text-decoration: none;
 }
@@ -274,7 +276,7 @@ input[type="number"] {
 
 .transc_edit {
   font-style: italic;
-  color:#434c5577;
+  color: #434c5577;
   text-decoration: none;
 }
 
@@ -287,7 +289,7 @@ input[type="number"] {
   background-color: #03476e00;
 }
 
-.transact_amount  {
+.transact_amount {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -298,7 +300,7 @@ input[type="number"] {
 }
 
 .transact_nametag {
-  color:#60b524;
+  color: #60b524;
   font-weight: 300;
   padding-left: 10px;
 }
@@ -306,7 +308,6 @@ input[type="number"] {
 .pophide {
   display: none;
 }
-
 
 /* NOTICE AND ALERTS */
 .popups {
@@ -320,7 +321,7 @@ input[type="number"] {
   padding: 3rem;
   background-color: #fff;
   font-size: 1.5rem;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -341,6 +342,69 @@ input[type="number"] {
   color: #fff;
 }
 
+/* BALANCE AND INCOME */
+.balance {
+  font-size: 2rem;
+}
+
+.income_expend {
+  font-size: 0.8rem;
+  color: #3878c2;
+}
+
+/* MENU */
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 20%;
+  background-color: #03476e;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.close_icon_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.close_icon {
+  font-size: 2rem;
+}
+
+.close_icon_text {
+  font-size: 0.8rem;
+  padding-top: 1vh;
+}
+
+.menulinks {
+  color: #fff;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 1vh;
+  margin-top: 2vh;
+  text-decoration: none;
+  background-color: #03476e;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menulinks button {
+  color: #fff;
+}
+
+/* DESKTOP STYLES */
 @media only screen and (min-width: 720px) {
   h2 {
     font-size: 2rem;
@@ -382,13 +446,16 @@ input[type="number"] {
   input[type="password"],
   input[type="email"],
   input[type="number"] {
-  width: 100%;
-  height: 1.6rem;
+    width: 100%;
+    height: 1.6rem;
   }
 
   .transact_nametag {
     padding-left: 2rem;
   }
+
+  .menu {
+    padding-bottom: 15vh;
+    overflow-y: scroll;
+  }
 }
-
-

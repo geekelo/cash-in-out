@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   resources :categories do
     resources :transactions
   end
+
+  resources :incomes do
+    collection do
+      post 'clear_all'
+    end
+  end
   
   # Defines the root path route ("/")
   authenticated :user do
@@ -19,5 +25,5 @@ Rails.application.routes.draw do
     root 'welcome#index', as: :unauthenticated_root
   end
   
-
+  delete '/users/:id', to: 'users#destroy', as: 'delete_user'
 end

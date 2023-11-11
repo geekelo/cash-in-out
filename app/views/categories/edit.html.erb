@@ -1,7 +1,7 @@
 <div class="topbar">
   <button class="back_icon signout_icon" onclick="javascript:history.back()">❮</button>
   <p class="topbar_text">Edit Category</p>
-  <%= button_to '◉', destroy_user_session_path, method: :delete, class: 'signout_icon' %>
+  <button class="back_icon signout_icon" onclick="toggleMenu()">☰</button>
   </div>
 
   <div class="reglogo_cont"><%= image_tag 'reglogo.png', alt: 'reg logo', class: 'reglogo' %></div>

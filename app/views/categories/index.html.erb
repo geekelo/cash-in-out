@@ -1,13 +1,24 @@
 <div class="topbar">
-  <button class="back_icon signout_icon" ="javascript:history.back()">☰</button>
+  <button class="back_icon signout_icon" onclick="toggleMenu()">☰</button>
   <p class="topbar_text">CATEGORIES</p>
   <%= button_to '◉', destroy_user_session_path, method: :delete, class: 'signout_icon' %>
 </div>
 
 <div class="acctbal">
-<p>Balance:</p>
-<p>Income:</p>
-<p>Expenditure: $<%= @total_expenditure %> </p>
+<div class="balance_cont">
+  <p class="income_expend">BALANCE: </p>
+  <p class="balance">$<%= @total_income - @total_expenditure %></p>
+  <br>
+</div>
+
+<div>
+<p class="income_expend">EXPENDITURE: $<%= @total_expenditure %> </p>
+<p class="income_expend">CREDIT: $<%= @total_income %></p>
+<div class="categtransact_edit_del_cont">
+<%= link_to '➕ Add Credit', new_income_path, class: 'transc_edit' %></p>
+<%= button_to '➖ Reset Credit', clear_all_incomes_path, method: :post, class: ['transc_edit', 'removebtnfeature'] %>
+</div>
+</div>
 </div>
 <ul class="transactions_cont">
 <% @categories.each do |category| %>
@@ -21,6 +32,7 @@
 <ul class="categtransact_edit_del_cont">
   <li><%= link_to 'Edit', edit_category_path(category), class: 'transc_edit' %></li>
   <li><%= button_to 'Delete', category_path(category), method: :delete, class: ['transc_edit', 'removebtnfeature'], data: { confirm: 'Are you sure?' } %></li>
+  <li><%= button_to 'View', category_path(category), class: ['transc_edit', 'removebtnfeature'], data: { confirm: 'Are you sure?' } %></li>
 </ul>
   </div>
   <p class="transact_amount">$<%= @total_amounts[category.id] %></p>

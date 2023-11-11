@@ -9,6 +9,8 @@ class CategoriesController < ApplicationController
       @total_amounts[category.id] = category.entities.sum(:amount)
     end
     @total_expenditure = current_user.entities.sum(:amount)
+    @incomes = current_user.incomes
+    @total_income = @incomes.sum(:amount)
   end
 
   def new
@@ -18,7 +20,7 @@ class CategoriesController < ApplicationController
   def create
     @category = current_user.groups.build(group_params)
     if @category.save
-      redirect_to categories_path, notice: 'Recipe item added successfully.'
+      redirect_to categories_path, notice: 'New Category created successfully.'
     else
       render :new
     end

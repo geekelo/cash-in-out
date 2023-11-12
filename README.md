@@ -14,8 +14,8 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 PERSONAL INVENTORY ](#-personal-inventory-)
-  - [Live demo](#-live-demo)
-  - [Video Presentation](#-video-presentation-)
+  - [Live demo](#live-demo)
+  - [Video Presentation](#video-presentation-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)

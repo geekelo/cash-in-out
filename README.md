@@ -14,6 +14,8 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 PERSONAL INVENTORY ](#-personal-inventory-)
+  - [Live demo](#-live-demo)
+  - [Video Presentation](#-video-presentation-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -36,6 +38,12 @@
 
 "**Cash In-Out** is a Ruby on Rails financial management application designed to help users efficiently track their income and expenses. The application enables users to create and manage transactions, categorize them, and visualize their financial activities. With features like user authentication, transaction editing, and category organization, Cash In-Out empowers users to maintain a clear overview of their financial transactions, facilitating effective budgeting and financial planning."
 
+## Live Demo & Presentation <a name="live-demo">
+[LIVE DEMO](https://cash-in-out-qoka.onrender.com/)
+
+<!-- Video Presentation -->
+## Video Presentation <a name="video-presentation"></a>
+[See Video](https://vimeo.com/883597169/4195c3d8ef?share=copy)
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -50,11 +58,7 @@
     <li><a href="https://guides.rubyonrails.org/">Rails</a></li>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
-</details>
-
-<!-- Video Presentation -->
-Video Presentation <a name="video-presentation"></a>
-[See Video](https://vimeo.com/883597169/4195c3d8ef?share=copy) 
+</details> 
 
 
 <!-- Features -->
@@ -189,7 +193,7 @@ DESIGN CONCEPT - [Snapscan](https://www.behance.net/gallery/19759151/Snapscan-iO
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./mit.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

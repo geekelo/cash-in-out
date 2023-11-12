@@ -9,7 +9,7 @@
 <%= form_with model: @category, url: categories_path, local: true do |form| %>
   <div class="field">
     <%= form.label :name, "Category:" %>
-    <%= form.collection_select(:name, ["Food", "Clothes", "Health", "Rent", "School", "Savings", "Family", "Charity", "Tithe/Offering", "Business/Staff", "Pet", "Maintenance", "Treats", "Transportation", "Other"], :to_s, :to_s, { prompt: "---" }, { class: 'fa-select' }) %>
+    <%= form.collection_select(:name, ["Food", "Clothes", "Health", "Rent", "School", "Savings", "Family", "Charity", "Investment", "Business", "Pet", "Maintenance", "Treats", "Transportation", "Other"], :to_s, :to_s, { prompt: "---" }, { class: 'fa-select' }) %>
   </div>
   <div class="field">
   <%= form.label :icon, "Choose Category Icon:" %>

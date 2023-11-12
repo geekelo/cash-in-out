@@ -303,6 +303,7 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
+  zeitwerk (~> 2.6)
 
 RUBY VERSION
    ruby 3.0.2p107

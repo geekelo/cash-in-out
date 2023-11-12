@@ -40,6 +40,5 @@ module CashInOut
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    Bundler.require(*Rails.groups)
   end
 end

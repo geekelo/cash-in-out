@@ -209,9 +209,9 @@ input[type="number"] {
   border-radius: 1px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   height: 5rem;
-  margin-bottom: 0.8rem;
   width: 95%;
   margin: auto;
+  margin-bottom: 0.8rem;
 }
 
 .icon {
@@ -228,7 +228,6 @@ input[type="number"] {
   display: flex;
   background-color: #60b524;
   padding: 1rem;
-  justify-content: space-between;
   color: #fff;
   text-align: center;
   align-items: center;

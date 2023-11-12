@@ -286,7 +286,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
-  devise
+  devise (~> 4.9.3)
   factory_bot_rails
   font-awesome-rails
   importmap-rails

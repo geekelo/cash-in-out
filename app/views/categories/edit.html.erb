@@ -11,7 +11,7 @@
   <%= form.text_field :name %>
 <br><br>
   <%= form.label :icon, "New Category Icon:"  %>
-  <%= form.collection_select(:icon, ["🏫", "🚌", "🍔", "🏥", "💡"], :to_s, :to_s, { prompt: "---" }, { class: 'fa-select' }) %>
+  <%= form.collection_select(:icon, [ "🍔", "👚", "🏥", "🏫", "📚", "🐷", "👪", "🎁", "💌", "👔", "🐈", "🛠", "🏖", "🚌", "💡" ], :to_s, :to_s, { prompt: "---" }, { class: 'fa-select' }) %>
 
   <div class="bottombar">
   <%= form.submit "Save Category", class: 'bottombar_text' %>

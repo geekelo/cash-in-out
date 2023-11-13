@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :group do
     name { 'Sample Group' }
-    icon { 'fa-star' } # Provide a non-blank value for the Icon attribute
+    icon { '🍔' } # Provide a non-blank value for the Icon attribute
     # other attributes as needed
   end
 end

@@ -1,12 +1,11 @@
 # spec/factories/entities.rb
+require 'faker'
+
 FactoryBot.define do
   factory :entity do
-    name { 'Example Transaction' }
-    amount { 100.0 }
     name { Faker::Lorem.word }
-    amount { Faker::Number.decimal(l_digits: 2) }
-    category { nil }
+    amount { Faker::Number.decimal }
     user
-    group
+    association :group, factory: :group
   end
 end

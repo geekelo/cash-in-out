@@ -61,8 +61,10 @@ group :development, :test do
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
   gem 'factory_bot_rails'
+  gem 'faker'
   gem 'font-awesome-rails'
   gem 'rails-controller-testing'
+  gem 'warden'
   gem 'webdrivers'
 end
 

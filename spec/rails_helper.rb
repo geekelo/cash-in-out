@@ -1,5 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
@@ -71,6 +72,22 @@ RSpec.configure do |config|
     end
   end
 
+  RSpec.configure do |configg|
+    configg.include Warden::Test::Helpers
+
+    # ...
+
+    configg.before(:suite) do
+      Warden.test_mode!
+    end
+
+    configg.after(:each) do
+      Warden.test_reset!
+    end
+  end
+
+  Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
+  config.include Devise::Test::IntegrationHelpers, type: :system
   config.include FactoryBot::Syntax::Methods
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::IntegrationHelpers, type: :request

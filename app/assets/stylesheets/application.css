@@ -40,9 +40,8 @@ li {
 
 /* SPLASH SCREEN */
 .home_cont {
-  background-color: #03476e;
+  background-color: #fff;
   height: 100vh;
-  background-image: url("bg.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,17 +61,22 @@ li {
 
 .regbtns {
   display: block;
-  background-color: #60b524;
+  background-color: #3878c2;
   color: #fff;
   text-align: center;
-  width: 30%;
-  margin-bottom: 5vh;
+  width: 60%;
+  margin-top: 5vh;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
-  border-radius: 2rem;
+  border-radius: 2px;
   text-decoration: none;
   font-weight: 500;
+}
+
+.regbtns2 {
+  background-color: #03476e00;
+  color: #434c55;
 }
 
 .regbtns:hover {

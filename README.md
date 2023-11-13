@@ -128,7 +128,7 @@ To run the project, execute the following command:
 ### Run Tests
 To run tests, run the following command:
 ```
-  bin/rails test test/models/article_test.rb
+  rspec spec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -165,7 +165,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/geekelo/unibek-school_library_app/issues).
+Feel free to check the [issues page](https://github.com/geekelo/cash-in-out/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

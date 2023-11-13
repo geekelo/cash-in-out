@@ -1,0 +1,26 @@
+<div class="topbar">
+  <button class="back_icon signout_icon" onclick="javascript:history.back()">❮</button>
+ <p class="topbar_text">Resend confirmation details</p>
+ <% if user_signed_in? %>
+ <button class="back_icon signout_icon" onclick="toggleMenu()">☰</button>
+  <% else %>
+  <%= link_to 'Home', welcome_path, class: 'menulinks' %>
+  <% end %>
+ </div>
+<section class="forms">
+
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Resend confirmation instructions" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</section>

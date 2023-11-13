@@ -1,0 +1,28 @@
+<div class="topbar">
+  <button class="back_icon signout_icon" onclick="javascript:history.back()">❮</button>
+  <p class="topbar_text">Add Transaction</p>
+  <button class="back_icon signout_icon" onclick="toggleMenu()">☰</button>
+ </div>
+ <div class="reglogo_cont"><%= image_tag 'reglogo.png', alt: 'reg logo', class: 'reglogo' %></div>
+ <section class="forms">
+<%= form_with(model: [@category, @transaction], url: category_transactions_path(@category)) do |f| %>
+  <% if @transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+      <ul>
+        <% @transaction.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.label :name, "Transaction:" %>
+  <%= f.text_field :name %>
+  <%= f.label :amount %>
+  <%= f.number_field :amount %>
+
+  <div class="bottombar">
+  <%= f.submit 'Add Transaction', class: 'bottombar_text' %>
+  </div>
+<% end %>
+</section>

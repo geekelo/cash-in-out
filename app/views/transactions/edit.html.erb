@@ -1,0 +1,20 @@
+<div class="topbar">
+  <button class="back_icon signout_icon" onclick="javascript:history.back()">❮</button>
+  <p class="topbar_text">Edit Transaction</p>
+  <button class="back_icon signout_icon" onclick="toggleMenu()">☰</button>
+ </div>
+
+ <div class="reglogo_cont"><%= image_tag 'reglogo.png', alt: 'reg logo', class: 'reglogo' %></div>
+ <section class="forms">
+<%= form_with model: @transaction, url: category_transaction_path(@category, @transaction), method: :patch do |form| %>
+  <%= form.label :name, "Transaction:" %>
+  <%= form.text_field :name %>
+
+  <%= form.label :amount, "Amount:" %>
+  <%= form.number_field :amount %>
+
+  <div class="bottombar">
+  <%= form.submit "Save Transaction", class: 'bottombar_text' %>
+</div>
+  <% end %>
+</section>

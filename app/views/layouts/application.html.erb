@@ -5,11 +5,47 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
+  <!-- MENU OPTIONS -->
+  <% if user_signed_in? %>
+  <section class="menu" id="menuSection">
+  <div class="close_icon_cont" onclick="toggleMenu()"><p class="close_icon">x</p><p class="close_icon_text">CLOSE</p></div>
+  <div>
+    <p><div class="reglogo_cont"><%= image_tag 'avatar.png', alt: 'reg logo', class: 'reglogo' %></div>    </p>
+    <p><%= current_user.name %></p>
+    <p><%= current_user.email %></p>
+  </div>
+<br><br>
+  <ul class="">
+  <%= link_to 'Home', categories_path, onclick: 'closeMenu()', class: 'menulinks' %>
+  <%= link_to 'Edit Profile', edit_user_registration_path, onclick: 'closeMenu()', class: 'menulinks' %>
+  <%= link_to 'Change Password', edit_user_registration_path, onclick: 'closeMenu()', class: 'menulinks' %>
+  <li class="menulinks"><%= button_to 'Delete Account', delete_user_path(current_user), class: 'removebtnfeature', onclick: 'closeMenu()', method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <li class="menulinks"><%= button_to 'Sign Out', destroy_user_session_path, method: :delete, onclick: 'closeMenu()', class: 'removebtnfeature' %></li>
+  </ul>
+
+  </section>
+  <% end %>
+
+
+  <!-- NOTICE AND ALERTS -->
+  <div class="<%= notice.present? ? 'notice popups' : 'pophide' %>">
+  <p class="noticeicon"> ✔</p>
+  <p><%= notice %></p>
+  <p class="closenotification">OKAY</p>
+  </div>
+  <div class="<%= alert.present? ? 'alert popups' : 'pophide' %>">
+  <p class="noticeicon"> !</p>
+  <p><%= alert %></p>
+  <p class="closenotification">OKAY</p>
+  </div>
     <%= yield %>
+
   </body>
 </html>

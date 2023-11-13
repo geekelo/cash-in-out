@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/node_modules/
 
 # Ignore all environment files (except templates).
 /.env*
@@ -33,3 +34,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+
+

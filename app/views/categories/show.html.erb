@@ -1,0 +1,31 @@
+<div class="topbar">
+<button class="back_icon signout_icon" onclick="javascript:history.back()">❮</button>
+<p class="topbar_text"><%= @category.name %></p>
+<button class="back_icon signout_icon" onclick="toggleMenu()">☰</button>
+</div>
+
+<p class="acctbal">Total Amount: $<%= @total_amount %></p>
+
+<ul class="transactions_cont">
+<span class="transact_nametag">Transactions:</span> 
+  <% @category.entities.each do |transaction| %>
+    <li class="transactions">
+    <div class="icon">💸</div>
+    <div class="categ_transcation">
+    <p class="categtransact_name">
+    <%= transaction.name %>
+      </p>
+      <ul class="categtransact_edit_del_cont">
+      <li><%= link_to 'Edit', edit_category_transaction_path(@category, transaction), class: 'transc_edit' %></li>
+      <li><%= button_to 'Delete', category_transaction_path(@category, transaction), class: ['transc_edit', 'removebtnfeature'], method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
+    </div>
+    <p class="transact_amount"> $<%= transaction.amount %></p>
+      </li>
+  <% end %>
+</ul>
+
+
+<div class="bottombar">
+<%= link_to 'Add Transactions', new_category_transaction_path(@category), class: 'bottombar_text' %>
+</div>

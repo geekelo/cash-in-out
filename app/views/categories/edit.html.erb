@@ -1,0 +1,20 @@
+<div class="topbar">
+  <button class="back_icon signout_icon" onclick="javascript:history.back()">❮</button>
+  <p class="topbar_text">Edit Category</p>
+  <button class="back_icon signout_icon" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <div class="reglogo_cont"><%= image_tag 'reglogo.png', alt: 'reg logo', class: 'reglogo' %></div>
+<section class="forms">
+<%= form_with(model: @category, url: category_path(@category), method: :patch) do |form| %>
+  <%= form.label :name, "New Category Name:"  %>
+  <%= form.text_field :name %>
+<br><br>
+  <%= form.label :icon, "New Category Icon:"  %>
+  <%= form.collection_select(:icon, [ "🍔", "👚", "🏥", "🏫", "📚", "🐷", "👪", "🎁", "💌", "👔", "🐈", "🛠", "🏖", "🚌", "💡" ], :to_s, :to_s, { prompt: "---" }, { class: 'fa-select' }) %>
+
+  <div class="bottombar">
+  <%= form.submit "Save Category", class: 'bottombar_text' %>
+  </div>
+  <% end %>
+</section>

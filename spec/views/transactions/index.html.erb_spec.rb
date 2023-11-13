@@ -33,12 +33,14 @@ RSpec.feature 'Complete Flow', type: :feature do
 
     # Ensure the created category is present
     expect(page).to have_link('Food')
+    expect(page).to have_link('View')
 
     # Step 4: Click on the created category(view)
     click_link 'Food'
 
     # Ensure the page has the correct content for the specific category
     expect(page).to have_content('Total')
+    expect(page).to have_content('ADD TRANSACTIONS')
 
     # Step 5: Click add transactions
     click_link 'Add Transaction'
@@ -50,5 +52,8 @@ RSpec.feature 'Complete Flow', type: :feature do
 
     # Assuming a successful creation will redirect to a different page or display a success message
     expect(page).to have_content('Transaction added successfully')
+    expect(page).to have_content('Grocery Shopping')
+    expect(page).to have_content('Edit')
+    expect(page).to have_content('Delete')
   end
 end

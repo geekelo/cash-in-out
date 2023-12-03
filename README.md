@@ -13,7 +13,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 PERSONAL INVENTORY ](#-personal-inventory-)
+- [📖 PERSONAL INVENTORY ](#personal-inventory-)
   - [Live demo](#live-demo)
   - [Video Presentation](#video-presentation-)
   - [🛠 Built With ](#-built-with-)

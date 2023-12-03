@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <!-- You are encouraged to replace this logo with your own! Otherwise, you can also remove it. -->
   <img src="https://geekelo.com.ng/wp-content/uploads/2023/12/Brown-Black-Geometric-Personal-Branding-LinkedIn-Banner.gif" alt="logo" width=""  height="auto" />
   <br/>
 
@@ -33,6 +33,7 @@
 
 <!-- PROJECT DESCRIPTION -->
   <img src="https://geekelo.com.ng/wp-content/uploads/2023/11/cash-in-out.png" alt="logo" width=""  height="auto" />
+
 # 📖 Cash In-Out App <a name="about-project"></a>
 
 

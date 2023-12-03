@@ -32,7 +32,7 @@
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
-
+  <img src="https://geekelo.com.ng/wp-content/uploads/2023/11/cash-in-out.png" alt="logo" width=""  height="auto" />
 # 📖 Cash In-Out App <a name="about-project"></a>
 
 

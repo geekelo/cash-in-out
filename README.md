@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="https://dl.dropboxusercontent.com/s/110axfscx8e9q3q/Screenshot%202023-04-27%20024351.png" alt="logo" width=""  height="auto" />
+  <img src="https://geekelo.com.ng/wp-content/uploads/2023/12/Brown-Black-Geometric-Personal-Branding-LinkedIn-Banner.gif" alt="logo" width=""  height="auto" />
   <br/>
 
   <h3><b>CASH IN-OUT</b></h3>
